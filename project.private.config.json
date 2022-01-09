@@ -1,0 +1,23 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "视频页面",
+          "pathName": "pages/homeVideo/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

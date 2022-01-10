@@ -1,1 +1,44 @@
 /* pages/homeVideo/index.wxss */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.video-box {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin-bottom: 16rpx;
+}
+.video-img {
+  position: relative;
+}
+.img {
+  width: 100%;
+  border-radius: 12rpx;
+}
+.video-info {
+  position: absolute;
+  bottom: 10rpx;
+  left: 10rpx;
+  right: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.info-count {
+  display: flex;
+  align-items: center;
+}
+.play-icon {
+  width: 30rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+.video-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

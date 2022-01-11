@@ -1,0 +1,35 @@
+/**
+ * 注意：在wxs文件中不可使用es6的语法
+ * 1、不可用let、const声明变量
+ * 2、不可用export default 导出函数，而要使用module.exports
+ * 3、不可使用解构等来简化对象赋值操作
+ */
+function formatCount(count) {
+  var count = parseInt(count);
+  if (count > 100000000) {
+    return (count / 100000000).toFixed(2) + '亿';
+  } else if (count > 10000){
+    return (count / 10000).toFixed(2) + '万';
+  } else {
+    return count;
+  }
+}
+// 5 -> 005 -> 05
+// 12 -> 0012 -> 12
+function padLeftZero(time) {
+  var time = time + '';
+  return ('00' + time).slice(time.length)
+}
+function formatDuration(duration) {
+  var hours = parseInt(duration / 3600000);
+  var seconds = parseInt((duration % 3600000) / 60000);
+  var minutes = parseInt((duration % 3600000) % 60000 / 1000);
+  var baseTime = padLeftZero(seconds) + ':' + padLeftZero(minutes)
+  return hours > 0 ? hour + ':' + baseTime : baseTime
+}
+
+module.exports = {
+  formatCount: formatCount,
+  formatDuration: formatDuration
+}
+

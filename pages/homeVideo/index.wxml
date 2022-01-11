@@ -1,4 +1,5 @@
 <!--pages/homeVideo/index.wxml-->
+<wxs src="../../utils/format.wxs" module="format"></wxs>
 <view class="video-container">
   <block wx:for="{{topMVs}}" wx:key="id">
     <view class="video-box">
@@ -7,9 +8,9 @@
         <view class="video-info">
           <view class="info-count">
             <image class="play-icon" src="/assets/images/icons/play_icon.png" />
-            <text>{{item.playCount}}</text>
+            <text>{{format.formatCount(item.playCount)}}</text>
           </view>
-          <view class="info-duration">{{item.mv.videos[0].duration}}</view>
+          <view class="info-duration">{{format.formatDuration(item.mv.videos[0].duration)}}</view>
         </view>
       </view>
       <view class="video-title">

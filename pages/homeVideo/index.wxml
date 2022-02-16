@@ -1,21 +1,24 @@
 <!--pages/homeVideo/index.wxml-->
 <wxs src="../../utils/format.wxs" module="format"></wxs>
-<view class="video-container">
-  <block wx:for="{{topMVs}}" wx:key="id">
-    <view class="video-box">
-      <view class="video-img">
-        <image class="img" mode="widthFix" src="{{item.cover}}" />
-        <view class="video-info">
-          <view class="info-count">
-            <image class="play-icon" src="/assets/images/icons/play_icon.png" />
-            <text>{{format.formatCount(item.playCount)}}</text>
+<!-- <scroll-view class="video-page" scroll-y bindscroll="loadMore"> -->
+  <view class="video-container">
+    <block wx:for="{{topMVs}}" wx:key="id">
+      <view class="video-box">
+        <view class="video-img">
+          <image class="img" mode="widthFix" src="{{item.cover}}" />
+          <view class="video-info">
+            <view class="info-count">
+              <image class="play-icon" src="/assets/images/icons/play_icon.png" />
+              <text>{{format.formatCount(item.playCount)}}</text>
+            </view>
+            <view class="info-duration">{{format.formatDuration(item.mv.videos[0].duration)}}</view>
           </view>
-          <view class="info-duration">{{format.formatDuration(item.mv.videos[0].duration)}}</view>
+        </view>
+        <view class="video-title">
+          {{item.name}}-{{item.artistName}}
         </view>
       </view>
-      <view class="video-title">
-        {{item.name}}-{{item.artistName}}
-      </view>
-    </view>
-  </block>
-</view>
+    </block>
+  </view>
+<!-- </scroll-view> -->
+

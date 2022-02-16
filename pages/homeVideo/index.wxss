@@ -1,4 +1,7 @@
 /* pages/homeVideo/index.wxss */
+.video-page {
+  height: 100vh;
+}
 .video-container {
   display: flex;
   flex-wrap: wrap;
